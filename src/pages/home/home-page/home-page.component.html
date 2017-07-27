@@ -1,0 +1,29 @@
+<button (click)="sortByAsccending()">正序排列</button>
+<button (click)="sortByDesccending()">倒序排列</button>
+<button (click)="sortByRadom()">随机打乱</button>
+<button (click)="deleteLast()">删除最后一个</button>
+<button (click)="saveNewUser()">新增一个</button>
+<table>
+  <tbody>
+    <tr>
+      <th>保险种类 </th>
+      <th>被保险者姓名 </th>
+      <th>被保险者性别 </th>
+      <th>被保险者年龄 </th>
+      <th>被保险者地址 </th>
+      <th>受益人 </th>
+      <th>支付期间 </th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr *ngFor="let insurance of insurances">
+      <td>{{insurance.plan}}</td>
+      <td>{{insurance.name}}</td>
+      <td>{{insurance.sex}}</td>
+      <td>{{insurance.age}} </td>
+      <td><a target="_blank" href="http://yahoo.co.jp">{{insurance.address}}</a></td>
+      <td>{{insurance.suffer}}</td>
+      <td>{{insurance.payperiod}}</td>
+    </tr>
+  </tbody>
+</table>
